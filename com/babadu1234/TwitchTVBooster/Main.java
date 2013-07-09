@@ -7,9 +7,14 @@ public class Main {
 	public static int numberOfViews = 60;
 
 	public static void main(String[] args) {
-		ThreadViews threadViews = new ThreadViews(numberOfViews);
-		Thread t = new Thread(threadViews);
-		t.start();
+		for (int i = 0; i < numberOfViews; i++) {
+			System.out.println("Reset");
+			for (int j = 0; j < i; j++) {
+				ThreadViews threadViews = new ThreadViews(numberOfViews);
+				Thread t = new Thread(threadViews);
+				t.start();
+			}
+		}
 	}
 
 }

@@ -9,7 +9,7 @@ public class StreamWatcher {
 		try {
 			URL twitchURL = new URL(Main.hostAndGet + Main.twitchUsername);
 			InputStream inStreamVideo = twitchURL.openStream();
-			System.out.println("test");
+			System.out.println("Reached");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
